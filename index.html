@@ -1,1 +1,31 @@
-<img src="giphy copy.gif" alt="giphy" />
+<html lang="en">
+  <head>
+    <title>getElementById example</title>
+    <script>
+        var tracker = "1";
+    function changeColor(){
+        var image = document.getElementById("id");
+        if (tracker === "1") {
+            image.src = "image2.jpg";
+            tracker = "2";
+        } else if (tracker === "2") {
+            image.src = "image3.jpg";
+            tracker = "3";
+        } else if (tracker ==="3"){
+            image.src = "image4.jpg";
+            tracker = "4";
+        } else{
+            image.src = "image1.jpg";
+            tracker = "1";
+        }
+    }
+    var timer = setInterval("changeColor();" , 5000);
+      </script>
+  </head>
+  <body>
+    <img id = "id" src = "image1.jpg", width="400", height=auto />
+    <div>
+        <img src = "giphy copy.gif"/>
+    </div>
+  </body>
+</html>
